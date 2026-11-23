@@ -1,0 +1,10 @@
+# Conda alternative to requirements.txt (same pinned versions as the runs behind the paper).
+# conda env create -f environment.yml && conda activate wanat-density-zoning
+name: wanat-density-zoning
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - -r requirements.txt

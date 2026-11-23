@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this software."
+title: "wanat-density-zoning: uncertainty-aware density-based seismogenic zoning of Western Anatolia"
+version: "3.0"
+date-released: "2026-11-23"
+license: MIT
+type: software
+authors:
+  - family-names: Adineh
+    given-names: Sadegh
+    orcid: "https://orcid.org/0000-0002-1504-9291"
+    affiliation: "Institute of Rock Structure and Mechanics, Czech Academy of Sciences, Prague, Czech Republic"
+  - family-names: Zare
+    given-names: Mohammad
+    affiliation: "Department of Earth Sciences, Shiraz University, Shiraz, Iran"
+keywords:
+  - seismogenic zoning
+  - DBSCAN
+  - HDBSCAN
+  - ETAS
+  - declustering
+  - Western Anatolia
+preferred-citation:
+  type: article
+  title: "Density clusters or earthquake sequences? An uncertainty-aware reassessment of density-based seismogenic zoning in Western Anatolia, Türkiye"
+  authors:
+    - family-names: Adineh
+      given-names: Sadegh
+      orcid: "https://orcid.org/0000-0002-1504-9291"
+    - family-names: Zare
+      given-names: Mohammad
+  journal: "Computers & Geosciences"
+  year: 2026
+  status: submitted

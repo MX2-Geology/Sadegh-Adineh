@@ -1,0 +1,141 @@
+{
+ "seeds": [
+  "20261028",
+  "1",
+  "2",
+  "3"
+ ],
+ "denizli_ensemble": {
+  "n_combinations": 16,
+  "n_supported": 6,
+  "J_boot_min": 0.73,
+  "J_boot_max": 0.756
+ },
+ "denizli_wdb15": {
+  "n": 8,
+  "n_supported": 8,
+  "J_boot_min": 0.871,
+  "J_boot_max": 0.894,
+  "J_B": [
+   0.5,
+   0.509
+  ]
+ },
+ "simav_wdb15_ker30": {
+  "n": 4,
+  "n_supported": 4,
+  "J_boot_min": 0.804,
+  "J_boot_max": 0.834,
+  "J_B": [
+   0.576
+  ],
+  "n_events": [
+   1237
+  ]
+ },
+ "se_aegean_wdb20": {
+  "n": 8,
+  "n_supported": 8,
+  "J_boot_min": 0.966,
+  "J_boot_max": 0.986,
+  "J_B": [
+   0.528,
+   0.531
+  ],
+  "n_events": [
+   1282,
+   1290
+  ],
+  "n_cells": [
+   249,
+   255
+  ]
+ },
+ "Mc25": {
+  "n_A": 14185,
+  "n_B": 13947,
+  "b": 0.87,
+  "branching_ratio": 0.909,
+  "expected_bg": 2388,
+  "eps_rule_km": 4.0,
+  "bg_density": 9.6,
+  "supported": [
+   {
+    "variant": "ensemble-DBKM",
+    "etas": "hom30",
+    "lon": 29.3,
+    "lat": 37.9,
+    "n_events": 375,
+    "exp_bg": 95.7,
+    "J_boot": 0.833,
+    "J_period_B_ZBZ": 0.673
+   },
+   {
+    "variant": "weighted-DBSCAN eps=10.0",
+    "etas": "hom30",
+    "lon": 28.04,
+    "lat": 39.13,
+    "n_events": 3545,
+    "exp_bg": 165.1,
+    "J_boot": 0.933,
+    "J_period_B_ZBZ": 0.68
+   },
+   {
+    "variant": "weighted-DBSCAN eps=10.0",
+    "etas": "hom30",
+    "lon": 29.34,
+    "lat": 37.9,
+    "n_events": 339,
+    "exp_bg": 76.4,
+    "J_boot": 0.788,
+    "J_period_B_ZBZ": 0.62
+   },
+   {
+    "variant": "weighted-DBSCAN eps=20.0",
+    "etas": "hom30",
+    "lon": 27.72,
+    "lat": 38.34,
+    "n_events": 13688,
+    "exp_bg": 2300.0,
+    "J_boot": 0.995,
+    "J_period_B_ZBZ": 0.635
+   }
+  ]
+ },
+ "Mc35": {
+  "n_A": 2088,
+  "n_B": 2305,
+  "b": 1.03,
+  "branching_ratio": 0.804,
+  "expected_bg": 480,
+  "eps_rule_km": 10.65,
+  "bg_density": 1.93,
+  "supported": [
+   {
+    "variant": "weighted-DBSCAN eps=20.0",
+    "etas": "hom30",
+    "lon": 26.19,
+    "lat": 39.49,
+    "n_events": 131,
+    "exp_bg": 14.3,
+    "J_boot": 0.977,
+    "J_period_B_ZBZ": 0.5
+   }
+  ]
+ },
+ "denizli_box": {
+  "box": "28.9-29.9E, 37.65-38.15N",
+  "n": 138,
+  "n_2019": 38,
+  "n_2026": 33,
+  "sum_Pbg_hom30": 33.8,
+  "sum_Pbg_hom30_2019_2026": 5.1,
+  "share_2019_2026": 0.151
+ },
+ "depth": {
+  "n": 5406,
+  "frac_exact_7": 0.144,
+  "frac_round01_7": 0.311,
+  "frac_gt40": 0.027
+ }
+}

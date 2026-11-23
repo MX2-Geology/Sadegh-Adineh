@@ -1,0 +1,22 @@
+       algorithm     convention      eps       tau   order  n_leaders  n_clusters  n_noise  n_clusters_ge12  n_noise_if_lt12_noise  abs_dclusters  abs_dnoise
+0   exact DBSCAN  self_included  0.01409       NaN       -        NaN          81      515               25                    855             66         491
+1   Rough-DBSCAN  self_included  0.01409  0.25*eps    time     3167.0          85      516               27                    868             70         490
+2   Rough-DBSCAN  self_included  0.01409  0.25*eps  random     3157.0          82      519               25                    859             67         487
+3   Rough-DBSCAN  self_included  0.01409   0.5*eps    time     2023.0          97      597               31                    994             82         409
+4   Rough-DBSCAN  self_included  0.01409   0.5*eps  random     1987.0         110      598               32                   1082             95         408
+5   exact DBSCAN  self_included  0.01600       NaN       -        NaN          60      412               21                    654             45         594
+6   Rough-DBSCAN  self_included  0.01600  0.25*eps    time     2951.0          63      423               22                    669             48         583
+7   Rough-DBSCAN  self_included  0.01600  0.25*eps  random     2944.0          63      423               20                    693             48         583
+8   Rough-DBSCAN  self_included  0.01600   0.5*eps    time     1813.0          83      468               25                    817             68         538
+9   Rough-DBSCAN  self_included  0.01600   0.5*eps  random     1805.0          89      481               30                    833             74         525
+10  exact DBSCAN  self_excluded  0.01588       NaN       -        NaN          56      524               25                    752             41         482
+11  Rough-DBSCAN  self_excluded  0.01588  0.25*eps    time     2961.0          58      536               26                    771             43         470
+12  Rough-DBSCAN  self_excluded  0.01588  0.25*eps  random     2955.0          61      539               28                    769             46         467
+13  Rough-DBSCAN  self_excluded  0.01588   0.5*eps    time     1827.0          72      583               26                    899             57         423
+14  Rough-DBSCAN  self_excluded  0.01588   0.5*eps  random     1814.0          74      579               30                    876             59         427
+15  exact DBSCAN  self_excluded  0.01600       NaN       -        NaN          55      512               25                    735             40         494
+16  Rough-DBSCAN  self_excluded  0.01600  0.25*eps    time     2951.0          55      531               26                    754             40         475
+17  Rough-DBSCAN  self_excluded  0.01600  0.25*eps  random     2952.0          57      529               26                    751             42         477
+18  Rough-DBSCAN  self_excluded  0.01600   0.5*eps    time     1813.0          71      579               26                    901             56         427
+19  Rough-DBSCAN  self_excluded  0.01600   0.5*eps  random     1813.0          74      589               31                    889             59         417
+{'algorithm': 'Rough-DBSCAN', 'convention': 'self_excluded', 'eps': 0.016, 'tau': '0.25*eps', 'order': 'time', 'n_leaders': 2951.0, 'n_clusters': 55, 'n_noise': 531, 'sizes': [1086, 998, 627, 410, 397, 141, 77, 76, 68, 63, 57, 52, 44, 40, 30], 'n_clusters_ge12': 26, 'n_noise_if_lt12_noise': 754, 'abs_dclusters': 40, 'abs_dnoise': 475}

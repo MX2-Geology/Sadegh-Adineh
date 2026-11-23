@@ -1,0 +1,15 @@
+{
+  "_note": "Parameters as set in the code (common.py, clustering.py, wa3.py) and the command lines used. Editing this file does not change the code; it documents the run.",
+  "seed": 20261028,
+  "region_analysis": {"lon": [26.0, 31.0], "lat": [36.0, 41.0]},
+  "region_download": {"lon": [25.0, 31.0], "lat": [36.0, 41.0]},
+  "projection": "AEQD, lat_0=38.5, lon_0=28.0, WGS84, km",
+  "clustering": {"MinPts": 5, "min_zone_events": 50, "HDBSCAN_default": {"min_cluster_size": 50, "min_samples": 5}, "OPTICS_default_xi": 0.05},
+  "bootstrap": {"B": 200, "subsample": 0.9, "replace": false, "epicentral_jitter_km": 5.0},
+  "stability_threshold_jaccard": 0.75, "persistence_threshold": 0.5, "alpha": 0.05,
+  "etas": {"package": "etas (Mizrahi et al. 2021), commit 097f08b", "auxiliary_start": "2016-01-01", "target": ["2016-07-01", "2026-10-14"], "delta_m": 0.1, "K_realisations": 20,
+           "runs": {"hom30": "13_etas.py hom30 3.0 0", "ker30": "13_etas.py ker30 3.0 1  (kernel background, bw_sq = 100 km^2)", "hom32": "13_etas.py hom32 3.2 0"}},
+  "constructive": {"cell_km": 10.0, "P_cell_min": 0.5, "coassignment_min": 0.5, "min_expected_background": 25, "weighted_dbscan_eps_km": [6.22, 10, 15, 20],
+                   "support_rule": "J_boot >= 0.75 AND period-B cell Jaccard >= 0.5", "command": "17_constructive.py 200"},
+  "fair_stability_command": "14_fair_stability.py 200"
+}

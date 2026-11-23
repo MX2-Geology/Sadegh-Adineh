@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Downloaded by code/get_external.sh (not redistributed; see README)
+data/raw/gem_gaf.geojson
+data/raw/gcmt/
+
+# Scratch and system files
+*.part
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Third-party input data that are not redistributed (see README, 'Obtaining the input data')
+data/w_anatolia/
+data/w_anatolia_extra/
+data/raw/isc/
+data/raw/ngl_midas.txt
+
+# Event catalogues derived from those data (rebuilt by run_all.sh)
+out/data/afad_all_region.csv
+out/data/isc_B_all_region.csv
+out/data/cat_A_AFAD_2016_2026.csv
+out/data/cat_A_labels.csv
+out/data/cat_A_labels_constructive.csv
+out/data/cat_B_ISC_2000_2015.csv
+out/data/gcmt_box.csv
+out/data/gnss_midas_eurasia.csv
+out/tables/S_afad_vs_ref_Mw_matches.csv

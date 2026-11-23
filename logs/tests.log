@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.2.0, pluggy-1.7.0 -- python
+cachedir: .pytest_cache
+rootdir: ./code
+collecting ... collected 12 items
+
+tests/test_core.py::test_declustering_flags_aftershocks PASSED           [  8%]
+tests/test_core.py::test_scitovski_eps_two_scale PASSED                  [ 16%]
+tests/test_core.py::test_b_aki_recovers_b1 PASSED                        [ 25%]
+tests/test_core.py::test_mc_maxc PASSED                                  [ 33%]
+tests/test_core.py::test_prune_relabels PASSED                           [ 41%]
+tests/test_core.py::test_dbscan_hdbscan_find_blobs PASSED                [ 50%]
+tests/test_core.py::test_grid_ari_identity PASSED                        [ 58%]
+tests/test_core.py::test_projection_km PASSED                            [ 66%]
+tests/test_wa3.py::test_leaders_cover_all_points_within_tau PASSED       [ 75%]
+tests/test_wa3.py::test_rough_dbscan_tau0_equals_exact PASSED            [ 83%]
+tests/test_wa3.py::test_rough_dbscan_small_tau_close_to_exact PASSED     [ 91%]
+tests/test_wa3.py::test_mbs_recovers_completeness PASSED                 [100%]
+
+============================== 12 passed in 1.43s ==============================

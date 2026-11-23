@@ -1,0 +1,12 @@
+./code/11_mc_spatial.py:5: DtypeWarning: Columns (14: lastUpdateDate) have mixed types. Specify dtype option on import or set low_memory=False.
+  A = pd.read_csv(f'{ROOT}/out/data/afad_all_region.csv')
+     lon   lat    n   Mc
+36  28.0  36.0  630  1.9
+6   26.0  40.0  273  2.0
+70  30.0  36.0  154  2.0
+2   26.0  38.0  452  2.0
+7   26.5  36.0  311  2.1
+79  30.5  36.0  130  2.1
+0   26.0  36.5  133  2.2
+8   26.5  36.5  298  2.3
+{'n_cells': 87, 'cell_Mc_median': 1.7, 'cell_Mc_p95': 2.0, 'cell_Mc_max': 2.3000000000000003, 'moving_MBS_p95': 2.45, 'Mc_analysis': 3.0, 'n_events_ge_Mc': 5406, 'n_ge_3_0': 5406, 'n_ge_3_2': 3623}

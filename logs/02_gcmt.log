@@ -1,0 +1,7 @@
+210 1979/06/14 2024/06/24
+style
+normal         127
+strike-slip     54
+oblique         24
+thrust           5
+Name: count, dtype: int64

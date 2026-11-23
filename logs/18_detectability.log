@@ -1,0 +1,64 @@
+{
+ "T_years": 10.28,
+ "eps_rule_km": 6.22,
+ "kde_median": 1.9,
+ "kde_max": 3.94,
+ "radii": {
+  "6.2km": {
+   "expected_bg_within": 0.514,
+   "sklearn_4_further": {
+    "enhancement_needed": 7.79,
+    "years_at_median": 42.1,
+    "years_at_max": 20.3
+   },
+   "strict_5_further": {
+    "enhancement_needed": 9.74,
+    "years_at_median": 52.7,
+    "years_at_max": 25.4
+   }
+  },
+  "10.0km": {
+   "expected_bg_within": 1.328,
+   "sklearn_4_further": {
+    "enhancement_needed": 3.01,
+    "years_at_median": 16.3,
+    "years_at_max": 7.9
+   },
+   "strict_5_further": {
+    "enhancement_needed": 3.77,
+    "years_at_median": 20.4,
+    "years_at_max": 9.8
+   }
+  },
+  "15.0km": {
+   "expected_bg_within": 2.987,
+   "sklearn_4_further": {
+    "enhancement_needed": 1.34,
+    "years_at_median": 7.2,
+    "years_at_max": 3.5
+   },
+   "strict_5_further": {
+    "enhancement_needed": 1.67,
+    "years_at_median": 9.1,
+    "years_at_max": 4.4
+   }
+  },
+  "20.0km": {
+   "expected_bg_within": 5.31,
+   "sklearn_4_further": {
+    "enhancement_needed": 0.75,
+    "years_at_median": 4.1,
+    "years_at_max": 2.0
+   },
+   "strict_5_further": {
+    "enhancement_needed": 0.94,
+    "years_at_median": 5.1,
+    "years_at_max": 2.5
+   }
+  }
+ },
+ "P_core_rule_eps_median": {
+  "sklearn_4_further": 0.01753,
+  "strict_5_further": 0.0033
+ }
+}

@@ -1,0 +1,15 @@
+Cartopy==0.26.0
+geopandas==1.2.0
+matplotlib==3.11.2
+numpy==2.5.4
+obspy==1.5.1
+pandas==3.0.6
+pyproj==3.8.0
+scikit-image==0.26.0
+scikit-learn==1.9.1
+scipy==1.18.1
+shapely==2.2.0
+statsmodels==0.15.0
+etas @ git+https://github.com/lmizrahi/etas.git@097f08b69a4f06f9c38d14799dedfbd4543144e3
+pytest==9.2.0
+Python 3.13.5

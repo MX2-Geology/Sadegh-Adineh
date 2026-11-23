@@ -1,0 +1,5 @@
+method,n_configs,default_ARI_all,default_ARI_clu,default_zones,best_ARI_all,median_ARI_all,best_ARI_clu,median_ARI_clu,best_cfg_ARI_clu,best_frac_events_stable,median_frac_events_stable
+SCIT,6,0.758,0.803,10/14,0.848,0.794,0.991,0.803,3,0.731,0.468
+DBKM,6,0.783,0.803,10/13,0.846,0.788,0.996,0.802,9,0.725,0.437
+HDB,9,0.623,0.883,10/24,0.792,0.628,0.984,0.903,20,0.844,0.467
+OPT,9,0.289,0.965,1/24,0.439,0.278,0.965,0.922,24,0.128,0.061

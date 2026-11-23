@@ -1,0 +1,37 @@
+run,variant,etas,lon,lat,n_events,exp_bg,J_boot,J_period_B_ZBZ,supported
+seed20261028,ensemble-HDB,hom30,29.31,37.9,159,53.5,0.738,0.528,False
+seed20261028,ensemble-DBKM,hom30,29.26,37.91,150,45.6,0.75,0.562,True
+seed20261028,ensemble-HDB,ker30,29.3,37.89,157,55.5,0.75,0.509,True
+seed20261028,ensemble-DBKM,ker30,29.26,37.91,148,47.6,0.756,0.542,True
+seed1,ensemble-HDB,hom30,29.31,37.9,159,53.5,0.739,0.528,False
+seed1,ensemble-DBKM,hom30,29.26,37.91,150,45.6,0.75,0.562,True
+seed1,ensemble-HDB,ker30,29.3,37.89,157,55.5,0.739,0.509,False
+seed1,ensemble-DBKM,ker30,29.26,37.91,148,47.6,0.752,0.542,True
+seed2,ensemble-HDB,hom30,29.31,37.9,159,53.5,0.73,0.528,False
+seed2,ensemble-DBKM,hom30,29.26,37.91,150,45.6,0.734,0.562,False
+seed2,ensemble-HDB,ker30,29.3,37.89,157,55.5,0.736,0.509,False
+seed2,ensemble-DBKM,ker30,29.26,37.91,148,47.6,0.736,0.542,False
+seed3,ensemble-HDB,hom30,29.31,37.9,159,53.5,0.738,0.528,False
+seed3,ensemble-DBKM,hom30,29.26,37.91,150,45.6,0.744,0.562,False
+seed3,ensemble-HDB,ker30,29.3,37.89,157,55.5,0.745,0.509,False
+seed3,ensemble-DBKM,ker30,29.26,37.91,148,47.6,0.752,0.542,True
+seed20261028,weighted-DBSCAN eps=15.0,hom30,29.27,37.91,152,44.7,0.89,0.509,True
+seed20261028,weighted-DBSCAN eps=15.0,ker30,29.27,37.91,151,46.8,0.893,0.5,True
+seed1,weighted-DBSCAN eps=15.0,hom30,29.27,37.91,152,44.7,0.887,0.509,True
+seed1,weighted-DBSCAN eps=15.0,ker30,29.27,37.91,151,46.8,0.894,0.5,True
+seed2,weighted-DBSCAN eps=15.0,hom30,29.27,37.91,152,44.7,0.871,0.509,True
+seed2,weighted-DBSCAN eps=15.0,ker30,29.27,37.91,151,46.8,0.879,0.5,True
+seed3,weighted-DBSCAN eps=15.0,hom30,29.27,37.91,152,44.7,0.879,0.509,True
+seed3,weighted-DBSCAN eps=15.0,ker30,29.27,37.91,151,46.8,0.891,0.5,True
+seed20261028,weighted-DBSCAN eps=15.0,ker30,28.07,39.15,1237,45.1,0.834,0.576,True
+seed1,weighted-DBSCAN eps=15.0,ker30,28.07,39.15,1237,45.1,0.833,0.576,True
+seed2,weighted-DBSCAN eps=15.0,ker30,28.07,39.15,1237,45.1,0.816,0.576,True
+seed3,weighted-DBSCAN eps=15.0,ker30,28.07,39.15,1237,45.1,0.804,0.576,True
+seed20261028,weighted-DBSCAN eps=20.0,hom30,27.7,36.69,1290,322.4,0.976,0.528,True
+seed20261028,weighted-DBSCAN eps=20.0,ker30,27.7,36.68,1282,333.9,0.986,0.531,True
+seed1,weighted-DBSCAN eps=20.0,hom30,27.7,36.69,1290,322.4,0.973,0.528,True
+seed1,weighted-DBSCAN eps=20.0,ker30,27.7,36.68,1282,333.9,0.986,0.531,True
+seed2,weighted-DBSCAN eps=20.0,hom30,27.7,36.69,1290,322.4,0.966,0.528,True
+seed2,weighted-DBSCAN eps=20.0,ker30,27.7,36.68,1282,333.9,0.986,0.531,True
+seed3,weighted-DBSCAN eps=20.0,hom30,27.7,36.69,1290,322.4,0.97,0.528,True
+seed3,weighted-DBSCAN eps=20.0,ker30,27.7,36.68,1282,333.9,0.986,0.531,True

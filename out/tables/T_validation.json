@@ -1,0 +1,76 @@
+{
+ "best_method_ARI_all": "DBKM",
+ "best_method_ARI_clustered": "OPT",
+ "zone_counts": {
+  "SCIT": {
+   "n": 14,
+   "stable": 10,
+   "persistent": 0,
+   "stable_and_persistent": 0
+  },
+  "DBKM": {
+   "n": 13,
+   "stable": 10,
+   "persistent": 0,
+   "stable_and_persistent": 0
+  },
+  "HDB": {
+   "n": 24,
+   "stable": 10,
+   "persistent": 3,
+   "stable_and_persistent": 3
+  },
+  "OPT": {
+   "n": 24,
+   "stable": 1,
+   "persistent": 0,
+   "stable_and_persistent": 0
+  }
+ },
+ "note_fault_test": "f5_noise column: noise events for raw zones; P_triggered-weighted fraction for ETAS rows",
+ "I2_zone_vs_noise_MWU_p": 2.2671605539032455e-06,
+ "I2_median_zone_noise": [
+  57.38617148007584,
+  55.99948537481056
+ ],
+ "I2_background_vs_grid": {
+  "p_median": 0.9505093640617766,
+  "p_max": 0.979922442816304,
+  "median_I2_grid": 56.99840816277739,
+  "median_I2_bg": 54.82355601140936
+ },
+ "axis_vs_fault_elongated": {
+  "n": 11,
+  "median_deg": 24.0,
+  "p_binomial_lt45": 0.11328125
+ },
+ "T_vs_gnss": {
+  "n": 12,
+  "median": 10.5,
+  "n_le20": 9,
+  "range": [
+   6.0,
+   48.0
+  ]
+ },
+ "b_pairs": {
+  "n": 66,
+  "sig": 0,
+  "b_range": [
+   0.74,
+   1.03
+  ]
+ },
+ "3D": {
+  "n": 3578,
+  "zones_3D": 14,
+  "zones_2D": 16,
+  "ARI": 0.852
+ },
+ "STAI": {
+  "n_mainshocks_M5_5": 13,
+  "events_in_helmstetter_windows": 94,
+  "max_Mc_0_6h": 3.2,
+  "median_Mc_1_30d": 1.8
+ }
+}

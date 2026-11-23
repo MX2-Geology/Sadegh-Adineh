@@ -1,0 +1,57 @@
+{
+ "n_events": 5128,
+ "paper": {
+  "n_events": 5324,
+  "eps": 0.016,
+  "n_clusters": 15,
+  "n_noise": 1006,
+  "sizes": [
+   1081,
+   1081,
+   999,
+   541,
+   156,
+   87,
+   80,
+   69,
+   57,
+   41,
+   40,
+   31,
+   24,
+   19,
+   12
+  ]
+ },
+ "closest_run": {
+  "algorithm": "Rough-DBSCAN",
+  "convention": "self_excluded",
+  "eps": 0.016,
+  "tau": "0.25*eps",
+  "order": "time",
+  "n_leaders": 2951.0,
+  "n_clusters": 55,
+  "n_noise": 531,
+  "sizes": [
+   1086,
+   998,
+   627,
+   410,
+   397,
+   141,
+   77,
+   76,
+   68,
+   63,
+   57,
+   52,
+   44,
+   40,
+   30
+  ],
+  "n_clusters_ge12": 26,
+  "n_noise_if_lt12_noise": 754,
+  "abs_dclusters": 40,
+  "abs_dnoise": 475
+ }
+}

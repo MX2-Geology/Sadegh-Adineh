@@ -1,0 +1,8 @@
+test,method,f5,f5_noise,null_mean,null_p95,p,f5_realisation_range,n_bg_mean
+raw zones,SCIT,0.525,0.362,0.299,0.464,0.01,,
+raw zones,DBKM,0.531,0.355,0.311,0.468,0.01,,
+raw zones,HDB,0.5,0.388,0.307,0.443,0.0199,,
+raw zones,OPT,0.562,0.39,0.306,0.489,0.0199,,
+ETAS background (hom30),-,0.343,0.513,0.288,0.311,0.001,"[np.float64(0.328), np.float64(0.354)]",1021.0
+ETAS background (ker30),-,0.344,0.514,0.288,0.312,0.002,"[np.float64(0.332), np.float64(0.353)]",1031.0
+all catalogue-A events,-,0.478,,0.288,0.299,0.001,,

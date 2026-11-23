@@ -1,0 +1,73 @@
+{
+ "afad_rows_M2.5_file_in_region": 14185,
+ "afad_rows_merged_in_region": 97846,
+ "afad_t0": "2016-01-01 00:37:26+00:00",
+ "afad_t1": "2026-10-13 23:26:39+00:00",
+ "crossmatch_vs_independent_Mw": {
+  "ML": {
+   "n": 1666,
+   "median_ref_minus_afad": 0.1,
+   "mean": 0.134,
+   "sd": 0.309,
+   "afad_M_range": [
+    1.5,
+    5.0
+   ],
+   "KK2016_resid_median": -0.634,
+   "KK2016_resid_sd": 0.188,
+   "n_ML>=3.3": 523,
+   "identity_resid_median_ML>=3.3": 0.0,
+   "OLS_refMw_on_afadML": [
+    0.556,
+    1.513
+   ]
+  },
+  "Mw": {
+   "n": 462,
+   "median_ref_minus_afad": 0.0,
+   "mean": 0.002,
+   "sd": 0.192,
+   "afad_M_range": [
+    3.0,
+    6.6
+   ]
+  }
+ },
+ "ref_authors": {
+  "ISK": 1685,
+  "GSI": 155,
+  "GCMT": 112,
+  "MED_RCMT": 85,
+  "NEIC": 53,
+  "GFZ": 25,
+  "ATH": 8,
+  "AUST": 3,
+  "TIR": 2
+ },
+ "Mc_AFAD": {
+  "all_maxc+0.2": 1.7,
+  "all_MBS": 1.8,
+  "ML_only_maxc+0.2": 1.7,
+  "Mw_only_maxc+0.2": 3.7,
+  "moving_window_maxc02_p95": 2.2,
+  "moving_window_MBS_p95": 2.45,
+  "moving_window_maxc02_max": 2.3000000000000003,
+  "moving_window_MBS_max": 3.0,
+  "annual_maxc02_max": 1.9,
+  "annual_MBS_max": 3.0
+ },
+ "Mc_ISC_B": {
+  "all_maxc+0.2": 2.9000000000000004,
+  "all_MBS": 4.0,
+  "annual_maxc02_max": 3.0,
+  "annual_MBS_max": 3.3
+ },
+ "ISC_B_magtypes": {
+  "MD": 0.797,
+  "ML": 0.18,
+  "MB": 0.012,
+  "MW": 0.01,
+  "MS": 0.002
+ },
+ "ISC_B_n_all": 52513
+}

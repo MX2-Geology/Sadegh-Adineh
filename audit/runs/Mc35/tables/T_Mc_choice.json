@@ -1,0 +1,11 @@
+{
+ "n_cells": 87,
+ "cell_Mc_median": 1.7,
+ "cell_Mc_p95": 2.0,
+ "cell_Mc_max": 2.3000000000000003,
+ "moving_MBS_p95": 2.45,
+ "Mc_analysis": 3.0,
+ "n_events_ge_Mc": 5406,
+ "n_ge_3_0": 5406,
+ "n_ge_3_2": 3623
+}

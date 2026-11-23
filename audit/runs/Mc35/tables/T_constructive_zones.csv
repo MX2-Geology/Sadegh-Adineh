@@ -1,0 +1,25 @@
+variant,etas,zone,n_cells,n_events,exp_bg,lon,lat,mean_Pcell,J_boot,J_boot_cells,J_period_B_ZBZ,J_period_B_GK,J_A_ZBZ,frac_within5km,bg_ge25,stable,persistent,supported
+ensemble-HDB,hom30,0,27,57,28.1,26.74,38.61,1.0,0.141,0.117,0.145,0.128,0.6,0.702,True,False,False,False
+ensemble-HDB,hom30,1,24,151,28.6,27.03,37.84,1.0,0.246,0.18,0.147,0.11,0.719,0.45,True,False,False,False
+ensemble-HDB,hom30,2,94,270,108.6,28.13,36.71,1.0,0.418,0.289,0.256,0.165,0.606,0.304,True,False,False,False
+ensemble-HDB,hom30,3,25,157,26.5,27.92,39.17,1.0,0.089,0.086,0.221,0.354,0.641,0.592,True,False,False,False
+ensemble-DBKM,hom30,0,27,57,28.1,26.74,38.61,1.0,0.141,0.117,0.152,0.13,0.214,0.702,True,False,False,False
+ensemble-DBKM,hom30,1,24,151,28.6,27.03,37.84,1.0,0.246,0.18,0.155,0.112,0.209,0.45,True,False,False,False
+ensemble-DBKM,hom30,2,94,270,108.6,28.13,36.71,1.0,0.418,0.289,0.259,0.222,0.631,0.304,True,False,False,False
+ensemble-DBKM,hom30,3,25,157,26.5,27.92,39.17,1.0,0.089,0.086,0.32,0.34,0.229,0.592,True,False,False,False
+weighted-DBSCAN eps=15.0,hom30,0,27,209,22.7,26.95,37.84,,0.78,,0.42,,,0.555,False,True,False,False
+weighted-DBSCAN eps=15.0,hom30,1,32,78,35.2,28.4,36.99,,0.315,,0.068,,,0.256,True,False,False,False
+weighted-DBSCAN eps=15.0,hom30,2,18,76,16.6,27.05,36.46,,0.288,,0.193,,,0.039,False,False,False,False
+weighted-DBSCAN eps=15.0,hom30,3,11,122,12.0,26.19,39.48,,0.81,,0.0,,,0.148,False,True,False,False
+weighted-DBSCAN eps=15.0,hom30,4,18,68,16.9,26.5,38.72,,0.159,,0.242,,,0.397,False,False,False,False
+weighted-DBSCAN eps=15.0,hom30,5,9,118,6.0,27.83,39.02,,0.476,,0.241,,,0.712,False,False,False,False
+weighted-DBSCAN eps=15.0,hom30,6,16,79,12.3,27.99,39.27,,0.268,,0.303,,,0.671,False,False,False,False
+weighted-DBSCAN eps=15.0,hom30,7,9,55,6.3,28.24,40.84,,0.027,,0.0,,,0.909,False,False,False,False
+weighted-DBSCAN eps=15.0,hom30,8,7,86,3.4,27.63,36.93,,0.203,,0.073,,,0.744,False,False,False,False
+weighted-DBSCAN eps=20.0,hom30,0,116,351,117.6,28.03,36.75,,0.672,,0.258,,,0.368,True,False,False,False
+weighted-DBSCAN eps=20.0,hom30,1,38,474,27.4,28.06,39.14,,0.939,,0.473,,,0.797,True,True,False,False
+weighted-DBSCAN eps=20.0,hom30,2,34,232,30.9,26.96,37.85,,0.915,,0.2,,,0.565,True,True,False,False
+weighted-DBSCAN eps=20.0,hom30,3,40,194,27.2,27.1,36.47,,0.72,,0.167,,,0.067,True,False,False,False
+weighted-DBSCAN eps=20.0,hom30,4,13,131,14.3,26.19,39.49,,0.977,,0.5,,,0.137,False,True,True,True
+weighted-DBSCAN eps=20.0,hom30,5,37,151,30.1,26.37,38.82,,0.629,,0.212,,,0.377,True,False,False,False
+weighted-DBSCAN eps=20.0,hom30,6,10,63,9.3,28.22,40.84,,0.539,,0.053,,,0.921,False,False,False,False

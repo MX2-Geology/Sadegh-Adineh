@@ -1,0 +1,160 @@
+| Scenario | Catalogues (converged / degenerate / fit error) | Events in catalogue A, median (range) | Branching ratio, converged fits (median) | Catalogues with ≥ 1 false supported zone: converged (degenerate) | Sources hit by supported zones, converged fits: ens-DBKM / wDB10 / wDB15 / wDB20 | Sources hit by oracle zones: wDB10 / wDB15 |
+|:---|---:|---:|---:|---:|---:|---:|
+| H0 | 12 (9 / 2 / 1) | 7,422 (5,796–10,425) | 0.88 | 0 of 9 (1 of 2) | — | — |
+| SRC, E = 5 | 8 (7 / 1 / 0) | 7,346 (6,643–9,439) | 0.89 | 0 of 7 (0 of 1) | 0 / 0 / 0 / 0 of 21 | 21 / 15 of 24 |
+| SRC, E = 10 | 8 (7 / 1 / 0) | 8,217 (5,448–10,242) | 0.89 | 0 of 7 (0 of 1) | 0 / 2 / 2 / 0 of 21 | 24 / 20 of 24 |
+| SRC, E = 20 | 8 (6 / 2 / 0) | 8,669 (7,739–10,756) | 0.90 | 0 of 6 (0 of 2) | 0 / 9 / 2 / 0 of 18 | 24 / 18 of 24 |
+
+{
+ "H0": {
+  "n": 12,
+  "ok": 9,
+  "deg": 2,
+  "err": 1,
+  "nA_med": 7422,
+  "nA_min": 5796,
+  "nA_max": 10425,
+  "br_ok_med": 0.8776744738672152,
+  "br_ok_min": 0.8605295144969928,
+  "br_ok_max": 0.8941190272505113,
+  "bgratio_ok_med": 1.05092095087993,
+  "false_cats_converged": 0,
+  "false_zones_converged": 0,
+  "false_by_var_converged": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "false_cats_degenerate": 1,
+  "false_zones_degenerate": 1,
+  "false_by_var_degenerate": {
+   "ens-DBKM": 1,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "kde_med_ok": [
+   1.1888653956879156,
+   1.3434777496510717
+  ],
+  "kde_max_ok": [
+   1.7604843527298424,
+   2.184495710550956
+  ],
+  "kde_med_ok_ge_1_9": 0,
+  "kde_max_ok_ge_3_94": 0,
+  "kde_med_deg": [
+   2.91,
+   3.0
+  ],
+  "kde_max_deg": [
+   18.5,
+   6.03
+  ]
+ },
+ "SRC, E = 5": {
+  "n": 8,
+  "ok": 7,
+  "deg": 1,
+  "err": 0,
+  "nA_med": 7346,
+  "nA_min": 6643,
+  "nA_max": 9439,
+  "br_ok_med": 0.890773750619219,
+  "br_ok_min": 0.8680524402261827,
+  "br_ok_max": 0.9139570721155372,
+  "bgratio_ok_med": 1.0333854346753384,
+  "false_cats_converged": 0,
+  "false_zones_converged": 0,
+  "false_by_var_converged": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "false_cats_degenerate": 0,
+  "false_zones_degenerate": 0,
+  "false_by_var_degenerate": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "hits_ens-DBKM": 0,
+  "src_total_ok": 21,
+  "hits_wDB10": 0,
+  "hits_wDB15": 0,
+  "hits_wDB20": 0,
+  "hits_oracle-wDB10": 21,
+  "src_total_all": 24,
+  "hits_oracle-wDB15": 15,
+  "hits_oracle-wDB20": 0
+ },
+ "SRC, E = 10": {
+  "n": 8,
+  "ok": 7,
+  "deg": 1,
+  "err": 0,
+  "nA_med": 8217,
+  "nA_min": 5448,
+  "nA_max": 10242,
+  "br_ok_med": 0.8914968393105394,
+  "br_ok_min": 0.8456102569718239,
+  "br_ok_max": 0.9113544542867754,
+  "bgratio_ok_med": 1.0155966801634684,
+  "false_cats_converged": 0,
+  "false_zones_converged": 0,
+  "false_by_var_converged": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "false_cats_degenerate": 0,
+  "false_zones_degenerate": 0,
+  "false_by_var_degenerate": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "hits_ens-DBKM": 0,
+  "src_total_ok": 21,
+  "hits_wDB10": 2,
+  "hits_wDB15": 2,
+  "hits_wDB20": 0,
+  "hits_oracle-wDB10": 24,
+  "src_total_all": 24,
+  "hits_oracle-wDB15": 20,
+  "hits_oracle-wDB20": 0
+ },
+ "SRC, E = 20": {
+  "n": 8,
+  "ok": 6,
+  "deg": 2,
+  "err": 0,
+  "nA_med": 8669,
+  "nA_min": 7739,
+  "nA_max": 10756,
+  "br_ok_med": 0.8998494365815807,
+  "br_ok_min": 0.8112982816060434,
+  "br_ok_max": 0.9139929251586772,
+  "bgratio_ok_med": 0.9308647283820285,
+  "false_cats_converged": 0,
+  "false_zones_converged": 0,
+  "false_by_var_converged": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "false_cats_degenerate": 0,
+  "false_zones_degenerate": 0,
+  "false_by_var_degenerate": {
+   "ens-DBKM": 0,
+   "wDB10": 0,
+   "wDB15": 0,
+   "wDB20": 0
+  },
+  "hits_ens-D

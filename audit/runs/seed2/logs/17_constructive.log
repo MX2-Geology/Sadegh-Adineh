@@ -1,0 +1,126 @@
+code/17_constructive.py:147: RuntimeWarning: Mean of empty slice
+  f5_null_mean=round(float(np.nanmean(nv)), 3), p_fault=round((1 + np.sum(nv >= f5)) / (1 + len(nv)), 4) if len(groups) else np.nan,
+                     variant   etas  n_zones  events_in_zones  f5_zones  f5_null_mean  p_fault       I2_MWU_p  I2_med_in  I2_med_out  cells_Pcell_ge_0_5  cells_observed  n_stable  n_persistent  n_supported  n_bg_ge25  Jboot_med  Jper_med
+0               ensemble-HDB  hom30        6             3680     0.525         0.294   0.0050  6.906635e-130       63.5        49.7               637.0           892.0       0.0           1.0          0.0        6.0   0.642299  0.280708
+1              ensemble-DBKM  hom30        6             3658     0.526         0.287   0.0050  3.663069e-144       63.5        49.3               591.0           892.0       0.0           1.0          0.0        6.0   0.662805  0.324768
+2    weighted-DBSCAN eps=6.2  hom30        0                0       NaN           NaN      NaN            NaN        NaN        57.4                 NaN             NaN       NaN           NaN          NaN        NaN        NaN       NaN
+3   weighted-DBSCAN eps=10.0  hom30       13             2514     0.617         0.304   0.0050   6.721036e-31       57.4        56.1                 NaN             NaN       1.0           3.0          0.0        2.0   0.382713  0.240000
+4   weighted-DBSCAN eps=15.0  hom30        9             4517     0.502         0.297   0.0050   3.423877e-15       57.4        55.6                 NaN             NaN       4.0           1.0          1.0        8.0   0.735854  0.356902
+5   weighted-DBSCAN eps=20.0  hom30        8             4939     0.487         0.296   0.0100   1.501272e-33       57.4        41.0                 NaN             NaN       4.0           1.0          1.0        7.0   0.739960  0.373860
+6               ensemble-HDB  ker30        6             3538     0.537         0.299   0.0050  5.050282e-107       63.5        49.9               594.0           892.0       0.0           1.0          0.0        6.0   0.646950  0.278219
+7              ensemble-DBKM  ker30        6             3554     0.534         0.290   0.0050  1.045100e-118       63.5        49.7               561.0           892.0       1.0           1.0          0.0        6.0   0.662757  0.319250
+8    weighted-DBSCAN eps=6.2  ker30        3              181     0.575         0.347   0.0945   1.333071e-21       84.4        57.1                 NaN             NaN       0.0           0.0          0.0        0.0   0.004207  0.000000
+9   weighted-DBSCAN eps=10.0  ker30       12             2736     0.598         0.297   0.0100   3.506802e-09       57.4        57.4                 NaN             NaN       2.0           2.0          0.0        4.0   0.564989  0.212144
+10  weighted-DBSCAN eps=15.0  ker30       11             4512     0.503         0.306   0.0050   1.553697e-17       57.4        55.6                 NaN             NaN       4.0           2.0          2.0        9.0   0.703295  0.433692
+11  weighted-DBSCAN eps=20.0  ker30        7             4863     0.489         0.293   0.0050   4.403931e-50       57.7        38.5                 NaN             NaN       3.0           1.0          1.0        6.0   0.749469  0.365385
+                     variant   etas  zone  n_cells  n_events  exp_bg    lon    lat  mean_Pcell    J_boot  J_boot_sd  J_boot_cells  J_period_B_ZBZ  J_period_B_GK  J_A_ZBZ  frac_within5km  bg_ge25  stable  persistent  supported
+0               ensemble-HDB  hom30     0      168      1992   212.0  27.39  38.71        0.93  0.596577   0.099158      0.453047        0.242268          0.230    0.274           0.612     True   False       False      False
+1               ensemble-HDB  hom30     1      231      1096   329.5  27.81  36.68        0.97  0.688020   0.125186      0.507455        0.148594          0.112    0.248           0.301     True   False       False      False
+2               ensemble-HDB  hom30     2       48       268    79.6  27.90  40.69        1.00  0.723223   0.197674      0.426978        0.241379          0.250    0.855           0.679     True   False       False      False
+3               ensemble-HDB  hom30     3       36       127    51.1  28.95  40.30        0.98  0.536142   0.228982      0.349571        0.319149          0.298    0.814           0.701     True   False       False      False
+4               ensemble-HDB  hom30     4       38       159    53.5  29.31  37.90        1.00  0.730049   0.098752      0.499252        0.528302          0.419    0.881           0.579     True   False        True      False
+5               ensemble-HDB  hom30     5       24        38    28.7  30.56  37.13        1.00  0.386738   0.403342      0.199283        0.395833          0.345    0.767           0.474     True   False       False      False
+6              ensemble-DBKM  hom30     0      166      1995   209.5  27.38  38.70        0.97  0.615856   0.092193      0.469960        0.337748          0.226    0.279           0.613     True   False       False      False
+7              ensemble-DBKM  hom30     1      215      1069   313.9  27.78  36.69        0.99  0.709755   0.108826      0.534720        0.311787          0.215    0.269           0.303     True   False       False      False
+8              ensemble-DBKM  hom30     2       50       270    81.6  27.90  40.68        0.96  0.740801   0.172602      0.429416        0.192982          0.237    0.538           0.678     True   False       False      False
+9              ensemble-DBKM  hom30     3       38       131    53.3  28.93  40.29        0.89  0.532001   0.230898      0.331611        0.260870          0.317    0.436           0.702     True   False       False      False
+10             ensemble-DBKM  hom30     4       32       150    45.6  29.26  37.91        0.98  0.734420   0.109107      0.526502        0.562500          0.333    0.848           0.580     True   False        True      False
+11             ensemble-DBKM  hom30     5       23        43    27.7  30.53  37.20        0.98  0.258222   0.357096      0.150533        0.406250          0.406    0.739           0.372     True   False       False      False
+12  weighted-DBSCAN eps=10.0  hom30     0       20        59    35.7  27.49  36.10         NaN  0.328350   0.372561           NaN        0.240000            NaN      NaN           0.085     True   False       False      False
+13  weighted-DBSCAN eps=10.0  hom30     1       38       174    57.1  28.42  37.00         NaN  0.456163   0.157886           NaN        0.373134            NaN      NaN           0.287     True   False       False      False
+14  weighted-DBSCAN eps=10.0  hom30     2        7       148     7.9  26.24  39.45         NaN  0.360345   0.236806           NaN        0.500000            NaN      NaN           0.311    False   False        True      False
+15  weighted-DBSCAN eps=10.0  hom30     3        9       150    14.2  28.26  40.84         NaN  0.540152   0.317548           NaN        0.000000            NaN      NaN           0.913    False   False       False      False
+16  weighted-DBSCAN eps=10.0  hom30     4       11       164    12.7  27.11  37.87         NaN  0.382713   0.167854           NaN        0.296296            NaN      NaN           0.530    False   False       False      False
+17  weighted-DBSCAN eps=10.0  hom30     5       12       160    10.6  26.11  38.94         NaN  0.547731   0.296617           NaN        0.733333            NaN      NaN           0.287    False   False        True      False
+18  weighted-DBSCAN eps=10.0  hom30     6       13       144    16.8  26.47  38.80         NaN  0.624852   0.222597           NaN        0.615385            NaN      NaN           0.354    False   False        True      False
+19  weighted-DBSCAN eps=10.0  hom30     7        8       193     5.7  27.64  36.94         NaN  0.088768   0.200717           NaN        0.148148            NaN      NaN           0.808    False   False       False      False
+20  weighted-DBSCAN eps=10.0  hom30     8       13        92    20.6  28.73  36.45         NaN  0.767306   0.252275           NaN        0.045455            NaN      NaN           0.000    False    True       False      False
+21  weighted-DBSCAN eps=10.0  hom30     9        8       208     7.0  27.83  39.04         NaN  0.385852   0.276677           NaN        0.200000            NaN      NaN           0.769    False   False       False      False
+22  weighted-DBSCAN eps=10.0  hom30    10        6       215     3.8  26.88  37.84         NaN  0.295269   0.200599           NaN        0.277778            NaN      NaN           0.721    False   False       False      False
+23  weighted-DBSCAN eps=10.0  hom30    11        5       116     5.6  27.10  36.41         NaN  0.145547   0.202719           NaN        0.217391            NaN      NaN           0.000    False   False       False      False
+24  weighted-DBSCAN eps=10.0  hom30    12        7       691     5.7  28.16  39.20         NaN  0.165053   0.270666           NaN        0.093750            NaN      NaN           0.952    False   False       False      False
+25  weighted-DBSCAN eps=15.0  hom30     0       25        92    34.7  28.98  40.48         NaN  0.735854   0.275480           NaN        0.324324            NaN      NaN           0.793     True   False       False      False
+26  weighted-DBSCAN eps=15.0  hom30     1       54       160    73.4  28.64  36.36         NaN  0.551938   0.347378           NaN        0.449275            NaN      NaN           0.000     True   False       False      False
+27  weighted-DBSCAN eps=15.0  hom30     2       35        86    53.5  27.51  36.17         NaN  0.302237   0.299225           NaN        0.118959            NaN      NaN           0.081     True   False       False      False
+28  weighted-DBSCAN eps=15.0  hom30     3       32       152    44.7  29.27  37.91         NaN  0.870528   0.117209           NaN        0.509091            NaN      NaN           0.592     True    True        True       True
+29  weighted-DBSCAN eps=15.0  hom30     4      131       990   159.0  27.58  36.79         NaN  0.752134   0.146334           NaN        0.438406            NaN      NaN           0.347     True    True       False      False
+30  weighted-DBSCAN eps=15.0  hom30     5      169      2316   180.1  27.48  38.76         NaN  0.650820   0.156995           NaN        0.356902            NaN      NaN           0.658     True   False       False      False
+31  weighted-DBSCAN eps=15.0  hom30     6       38       241    66.3  27.93  40.72         NaN  0.852585   0.118177           NaN        0.333333            NaN      NaN           0.672     True    True       False      False
+32  weighted-DBSCAN eps=15.0  hom30     7        8       146     6.5  28.98  39.22         NaN  0.707082   0.413723           NaN        0.225806            NaN      NaN           0.027    False   False       False      False
+33  weighted-DBSCAN eps=15.0  hom30     8       21       334    26.6  26.19  39.50         NaN  0.967032   0.108361           NaN        0.475000            NaN      NaN           0.186     True    True       False      False
+34  weighted-DBSCAN eps=20.0  hom30     0      232      2538   241.5  27.43  38.72         NaN  0.872370   0.071027           NaN        0.466377            NaN      NaN           0.624     True    True       False      False
+35  weighted-DBSCAN eps=20.0  hom30     1       33        50    36.0  30.53  37.13         NaN  0.003274   0.021177           NaN        0.378788            NaN      NaN           0.360     True   False       False      False
+36  weighted-DBSCAN eps=20.0  hom30     2       43       133    59.2  28.90  40.29         NaN  0.524984   0.330093           NaN        0.278689            NaN      NaN           0.699     True   False       False      False
+37  weighted-DBSCAN eps=20.0  hom30     3      255      1290   322.4  27.70  36.69         NaN  0.966474   0.106503           NaN        0.528474            NaN      NaN           0.282     True    True        True       True
+38  weighted-DBSCAN eps=20.0  hom30     4       44       172    54.6  29.32  37.87         NaN  0.794252   0.079440           NaN        0.368932            NaN      NaN           0.564     True    True       False      False
+39  weighted-DBSCAN eps=20.0  hom30     5       57       269    87.1  27.90  40.67         NaN  0.685667   0.299501           NaN        0.450549            NaN      NaN           0.677     True   False       False      False
+40  weighted-DBSCAN eps=20.0  hom30     6       12       152    10.7  28.99  39.22         NaN  0.845888   0.254070           NaN        0.108696            NaN      NaN           0.026    False    True       False      False
+41  weighted-DBSCAN eps=20.0  hom30     7       22       335    27.0  26.19  39.50         NaN  0.267208   0.334044           NaN        0.047191            NaN      NaN           0.185     True   False       False      False
+42              ensemble-HDB  ker30     0      141      1871   201.1  27.39  38.70        0.93  0.576886   0.113234      0.452930        0.229885          0.231    0.273           0.640     True   False       False      False
+43              ensemble-HDB  ker30     1      220      1076   336.9  27.80  36.69        0.90  0.717015   0.085621      0.530094        0.150628          0.117    0.260           0.300     True   False       False      False
+44              ensemble-HDB  ker30     2       49       269    83.2  27.90  40.69        0.99  0.735532   0.195058      0.429812        0.237288          0.246    0.873           0.677     True   False       False      False
+45              ensemble-HDB  ker30     3       36       127    51.5  28.95  40.30        0.98  0.552765   0.223291      0.351501        0.319149          0.298    0.814           0.701     True   False       False      False
+46              ensemble-HDB  ker30     4       37       157    55.5  29.30  37.89        1.00  0.735857   0.085219      0.502050        0.509434          0.429    0.857           0.573     True   False        True      False
+47              ensemble-HDB  ker30     5       24        38    28.4  30.56  37.13        1.00  0.381549   0.404063      0.197216        0.395833          0.345    0.767           0.474     True   False       False      False
+48             ensemble-DBKM  ker30     0      154      1897   212.8  27.39  38.70        0.97  0.593853   0.108726      0.467489        0.324324          0.221    0.253           0.633     True   False       False      False
+49             ensemble-DBKM  ker30     1      213      1065   328.4  27.79  36.69        0.98  0.731660   0.058652      0.547727        0.314176          0.217    0.272           0.303     True   False       False      False
+50             ensemble-DBKM  ker30     2       50       270    84.2  27.90  40.68        0.95  0.769600   0.143931      0.442419        0.192982          0.237    0.538           0.678     True    True       False      False
+51             ensemble-DBKM  ker30     3       38       131    53.8  28.93  40.29        0.86  0.543703   0.216794      0.334890        0.260870          0.317    0.436           0.702     True   False       False      False
+52             ensemble-DBKM  ker30     4       31       148    47.6  29.26  37.91        0.98  0.736199   0.112743      0.530970        0.541667          0.339    0.818           0.574     True   False        True      False
+53             ensemble-DBKM  ker30     5       23        43    27.3  30.53  37.20        0.95  0.175816   0.322393      0.102617        0.406250          0.406    0.739           0.372     True   False       False      False
+54   weighted-DBSCAN eps=6.2  ker30     0        7        54    10.4  28.56  37.10         NaN  0.000000   0.000000           NaN        0.000000            NaN      NaN           0.278    False   False       False      False
+55   weighted-DBSCAN eps=6.2  ker30     1        4        72     6.2  28.35  40.84         NaN  0.004207   0.047148           NaN        0.000000            NaN      NaN           0.986    False   False       False      False
+56   weighted-DBSCAN eps=6.2  ker30     2        5        55     5.3  27.14  37.92         NaN  0.014211   0.070957           NaN        0.000000            NaN      NaN           0.327    False   False       False      False
+57  weighted-DBSCAN eps=10.0  ker30     0       24        68    47.7  27.49  36.12         NaN  0.536209   0.397867           NaN        0.206897            NaN      NaN           0.074     True   False       False      False
+58  weighted-DBSCAN eps=10.0  ker30     1       41       183    70.2  28.43  37.00         NaN  0.598527   0.134839           NaN        0.366197            NaN      NaN           0.279     True   False       False      False
+59  weighted-DBSCAN eps=10.0  ker30     2       26       488    35.5  26.96  37.86         NaN  0.854076   0.066435           NaN        0.333333            NaN      NaN           0.600     True    True       False      False
+60  weighted-DBSCAN eps=10.0  ker30     3       13       146    18.8  26.47  38.80         NaN  0.670487   0.182200           NaN        0.615385            NaN      NaN           0.349    False   False        True      False
+61  weighted-DBSCAN eps=10.0  ker30     4        7       148     8.2  26.24  39.45         NaN  0.407422   0.212246           NaN        0.500000            NaN      NaN           0.311    False   False        True      False
+62  weighted-DBSCAN eps=10.0  ker30     5        5       151     4.6  26.12  39.54         NaN  0.130507   0.150282           NaN        0.187500            NaN      NaN           0.086    False   False       False      False
+63  weighted-DBSCAN eps=10.0  ker30     6       11       157    20.0  28.24  40.84         NaN  0.688720   0.222859           NaN        0.000000            NaN      NaN           0.917    False   False       False      False
+64  weighted-DBSCAN eps=10.0  ker30     7        8       228     5.5  27.62  36.94         NaN  0.147562   0.255752           NaN        0.142857            NaN      NaN           0.794    False   False       False      False
+65  weighted-DBSCAN eps=10.0  ker30     8       15        94    25.2  28.73  36.44         NaN  0.827901   0.148715           NaN        0.086957            NaN      NaN           0.000     True    True       False      False
+66  weighted-DBSCAN eps=10.0  ker30     9       11       260    11.6  27.85  39.03         NaN  0.593769   0.279242           NaN        0.258065            NaN      NaN           0.719    False   False       False      False
+67  weighted-DBSCAN eps=10.0  ker30    10        5       116     5.6  27.10  36.41         NaN  0.143485   0.202381           NaN        0.217391            NaN      NaN           0.000    False   False       False      False
+68  weighted-DBSCAN eps=10.0  ker30    11        7       697     5.8  28.16  39.20         NaN  0.184145   0.272725           NaN        0.166667            NaN      NaN           0.953    False   False       False      False
+69  weighted-DBSCAN eps=15.0  ker30     0       25        92    35.1  28.98  40.48         NaN  0.703295   0.278957           NaN        0.324324            NaN      NaN           0.793     True   False       False      False
+70  weighted-DBSCAN eps=15.0  ker30     1       54       160    78.0  28.64  36.36         NaN  0.483372   0.345854           NaN        0.449275            NaN      NaN           0.000     True   False       False      False
+71  weighted-DBSCAN eps=15.0  ker30     2       35        86    59.2  27.51  36.17         NaN  0.265536   0.277663           NaN        0.117647            NaN      NaN           0.081     True   False       False      False
+72  weighted-DBSCAN eps=15.0  ker30     3      131       988   165.2  27.59  36.79         NaN  0.745061   0.141161           NaN        0.433692            NaN      NaN           0.347     True   False       False      False
+73  weighted-DBSCAN eps=15.0  ker30     4      113      1026   130.7  26.74  38.28         NaN  0.688121   0.214284           NaN        0.456067            NaN      NaN           0.488     True   False       False      False
+74  weighted-DBSCAN eps=15.0  ker30     5       38       241    68.8  27.93  40.72         NaN  0.876838   0.103501           NaN        0.333333            NaN      NaN           0.672     True    True       False      False
+75  weighted-DBSCAN eps=15.0  ker30     6       49      1237    45.1  28.07  39.15         NaN  0.816456   0.172911           NaN        0.576471            NaN      NaN           0.822     True    True        True       True
+76  weighted-DBSCAN eps=15.0  ker30     7        9        51    10.2  27.57  38.62         NaN  0.199449   0.308302           NaN        0.000000            NaN      NaN           0.255    False   False       False      False
+77  weighted-DBSCAN eps=15.0  ker30     8       32       151    46.8  29.27  37.91         NaN  0.878992   0.102781           NaN        0.500000            NaN      NaN           0.589     True    True        True       True
+78  weighted-DBSCAN eps=15.0  ker30     9       21       334    25.7  26.19  39.50         NaN  0.973206   0.017358           NaN        0.475000            NaN      NaN           0.186     True    True       False      False
+79  weighted-DBSCAN eps=15.0  ker30    10        8       146     5.1  28.98  39.22         NaN  0.211241   0.385189           NaN        0.184211            NaN      NaN           0.027    False   False       False      False
+80  weighted-DBSCAN eps=20.0  ker30     0       43       133    59.4  28.90  40.29         NaN  0.565218   0.322742           NaN        0.278689            NaN      NaN           0.699     True   False       False      False
+81  weighted-DBSCAN eps=20.0  ker30     1      249      1282   333.9  27.70  36.68         NaN  0.986485   0.005122           NaN        0.530892            NaN      NaN           0.282     True    True        True       True
+82  weighted-DBSCAN eps=20.0  ker30     2      229      2525   241.7  27.43  38.72         NaN  0.937683   0.062095           NaN        0.462039            NaN      NaN           0.626     True    True       False      False
+83  weighted-DBSCAN eps=20.0  ker30     3       44       171    56.5  29.32  37.87         NaN  0.791368   0.080409           NaN        0.365385            NaN      NaN           0.561     True    True       False      False
+84  weighted-DBSCAN eps=20.0  ker30     4       57       269    89.4  27.90  40.67         NaN  0.749469   0.250233           NaN        0.445652            NaN      NaN           0.677     True   False       False      False
+85  weighted-DBSCAN eps=20.0  ker30     5        9       148     6.2  28.98  39.22         NaN  0.688823   0.408491           NaN        0.087912            NaN      NaN           0.027    False   False       False      False
+86  weighted-DBSCAN eps=20.0  ker30     6       22       335    25.8  26.19  39.50         NaN  0.686527   0.420000           NaN        0.047085            NaN      NaN           0.185     True   False       False      False
+{
+ "T_years": 10.28,
+ "region_area_km2": 241860,
+ "expected_bg": 1022.0,
+ "bg_density_per_1e4km2_per_yr": 4.11,
+ "eps_rule_km": 6.22,
+ "expected_bg_within_6.2km": 0.514,
+ "enhancement_needed_MinPts5_6.2km": 9.7,
+ "expected_bg_within_10.0km": 1.328,
+ "enhancement_needed_MinPts5_10.0km": 3.8,
+ "expected_bg_within_15.0km": 2.987,
+ "enhancement_needed_MinPts5_15.0km": 1.7,
+ "expected_bg_within_20.0km": 5.31,
+ "enhancement_needed_MinPts5_20.0km": 0.9,
+ "kde_ratio_raw_zones_max": 3.94,
+ "kde_ratio_raw_zones_median": 1.9,
+ "years_to_MinPts5_at_median_KDE_ratio_6.2km": 52.7,
+ "years_to_MinPts5_at_median_KDE_ratio_10.0km": 20.4,
+ "years_to_MinPts5_at_max_KDE_ratio_6.2km": 25.4,
+ "years_to_MinPts5_at_max_KDE_ratio_10.0km": 9.8,
+ "P_core_rule_eps_at_median_ratio": 0.0033
+}
+runtime 106.15793991088867

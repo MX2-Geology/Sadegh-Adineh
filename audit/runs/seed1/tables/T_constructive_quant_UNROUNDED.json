@@ -1,0 +1,36 @@
+{
+ "minpts_B_density_matched": {
+  "hom30_6.2": 38,
+  "hom30_10.0": 38,
+  "hom30_15.0": 38,
+  "hom30_20.0": 38,
+  "ker30_6.2": 37,
+  "ker30_10.0": 37,
+  "ker30_15.0": 37,
+  "ker30_20.0": 37
+ },
+ "quantification": {
+  "T_years": 10.28,
+  "region_area_km2": 241860,
+  "expected_bg": 1022.0,
+  "bg_density_per_1e4km2_per_yr": 4.11,
+  "eps_rule_km": 6.22,
+  "expected_bg_within_6.2km": 0.514,
+  "enhancement_needed_MinPts5_6.2km": 9.7,
+  "expected_bg_within_10.0km": 1.328,
+  "enhancement_needed_MinPts5_10.0km": 3.8,
+  "expected_bg_within_15.0km": 2.987,
+  "enhancement_needed_MinPts5_15.0km": 1.7,
+  "expected_bg_within_20.0km": 5.31,
+  "enhancement_needed_MinPts5_20.0km": 0.9,
+  "kde_ratio_raw_zones_max": 3.94,
+  "kde_ratio_raw_zones_median": 1.9,
+  "years_to_MinPts5_at_median_KDE_ratio_6.2km": 52.7,
+  "years_to_MinPts5_at_median_KDE_ratio_10.0km": 20.4,
+  "years_to_MinPts5_at_max_KDE_ratio_6.2km": 25.4,
+  "years_to_MinPts5_at_max_KDE_ratio_10.0km": 9.8,
+  "P_core_rule_eps_at_median_ratio": 0.0033
+ },
+ "runtime_s": 108,
+ "B": 200
+}

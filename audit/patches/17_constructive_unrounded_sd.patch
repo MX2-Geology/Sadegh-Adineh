@@ -1,0 +1,51 @@
+--- code/17_constructive.py	2026-10-28 16:38:49.752265314 +0100
++++ code/17_constructive.py	2026-10-31 10:40:36.077851015 +0100
+@@ -111,7 +111,7 @@
+             ev = zev == z; Q = XY[ev]
+             zrows.append(dict(variant=f'ensemble-{method}', etas=tag, zone=int(z), n_cells=len(S), n_events=int(ev.sum()), exp_bg=round(float(Pbg[ev].sum()), 1),
+                               lon=round(A.lon[ev].mean(), 2), lat=round(A.lat[ev].mean(), 2), mean_Pcell=round(float(np.mean([ens['Pcell'][ens['U'].index(c)] for c in S])), 2),
+-                              J_boot=round(float(np.mean(jbe[z])), 3), J_boot_cells=round(float(np.mean(jb[z])), 3), J_period_B_ZBZ=round(best_j(S, Bsets[method]), 3), J_period_B_GK=round(best_j(S, BsetsGK[method]), 3),
++                              J_boot=float(np.mean(jbe[z])), J_boot_sd=float(np.std(jbe[z], ddof=1)), J_boot_cells=float(np.mean(jb[z])), J_period_B_ZBZ=best_j(S, Bsets[method]), J_period_B_GK=round(best_j(S, BsetsGK[method]), 3),
+                               J_A_ZBZ=round(best_j(S, list(A_zbz[method].values())), 3), frac_within5km=round(float(np.mean(dfa[ev] <= 5)), 3)))
+         summary.append(dict(variant=f'ensemble-{method}', etas=tag, n_zones=len(sets), events_in_zones=int((zev >= 0).sum()),
+                             f5_zones=round(f5, 3), f5_null_mean=round(float(np.nanmean(nv)), 3), p_fault=round((1 + np.sum(nv >= f5)) / (1 + len(nv)), 4) if len(groups) else np.nan,
+@@ -141,8 +141,8 @@
+         for z in jb:
+             ev = lab == z; S = set(cells(XY[ev]))
+             zrows.append(dict(variant=f'weighted-DBSCAN eps={eps:.1f}', etas=tag, zone=int(z), n_cells=len(S), n_events=int(ev.sum()), exp_bg=round(float(Pbg[ev].sum()), 1),
+-                              lon=round(A.lon[ev].mean(), 2), lat=round(A.lat[ev].mean(), 2), mean_Pcell=np.nan, J_boot=round(float(np.mean(jb[z])), 3),
+-                              J_period_B_ZBZ=round(best_j(S, SB), 3), J_period_B_GK=np.nan, J_A_ZBZ=np.nan, frac_within5km=round(float(np.mean(dfa[ev] <= 5)), 3), J_boot_cells=np.nan))
++                              lon=round(A.lon[ev].mean(), 2), lat=round(A.lat[ev].mean(), 2), mean_Pcell=np.nan, J_boot=float(np.mean(jb[z])), J_boot_sd=float(np.std(jb[z], ddof=1)),
++                              J_period_B_ZBZ=best_j(S, SB), J_period_B_GK=np.nan, J_A_ZBZ=np.nan, frac_within5km=round(float(np.mean(dfa[ev] <= 5)), 3), J_boot_cells=np.nan))
+         summary.append(dict(variant=f'weighted-DBSCAN eps={eps:.1f}', etas=tag, n_zones=len(jb), events_in_zones=int((lab >= 0).sum()), f5_zones=round(f5, 3) if len(jb) else np.nan,
+                             f5_null_mean=round(float(np.nanmean(nv)), 3), p_fault=round((1 + np.sum(nv >= f5)) / (1 + len(nv)), 4) if len(groups) else np.nan,
+                             I2_MWU_p=float(mannwhitneyu(I2ev[lab >= 0], I2ev[lab < 0], alternative='greater').pvalue) if (lab >= 0).sum() > 5 else np.nan, I2_med_in=round(float(np.median(I2ev[lab >= 0])), 1) if (lab >= 0).any() else np.nan, I2_med_out=round(float(np.median(I2ev[lab < 0])), 1)))
+@@ -150,12 +150,12 @@
+ Zr = pd.DataFrame(zrows)
+ if len(Zr):
+     Zr['bg_ge25'] = Zr.exp_bg >= 25; Zr['stable'] = Zr.J_boot >= 0.75; Zr['persistent'] = Zr.J_period_B_ZBZ >= 0.5; Zr['supported'] = Zr.stable & Zr.persistent
+-Zr.to_csv(f'{ROOT}/out/tables/T_constructive_zones.csv', index=False)
++Zr.to_csv(f'{ROOT}/out/tables/T_constructive_zones_UNROUNDED.csv', index=False)
+ S = pd.DataFrame(summary)
+ if len(Zr):
+     g = Zr.groupby(['variant', 'etas']); S = S.merge(g.agg(n_stable=('stable', 'sum'), n_persistent=('persistent', 'sum'), n_supported=('supported', 'sum'), n_bg_ge25=('bg_ge25', 'sum'),
+                                                         Jboot_med=('J_boot', 'median'), Jper_med=('J_period_B_ZBZ', 'median')).reset_index(), on=['variant', 'etas'], how='left')
+-S.to_csv(f'{ROOT}/out/tables/T_constructive_summary.csv', index=False)
++S.to_csv(f'{ROOT}/out/tables/T_constructive_summary_UNROUNDED.csv', index=False)
+ # ---------- quantification: required local enhancement of background density
+ area = REGPOLY.area; T = (pd.to_datetime(A.time.max(), utc=True) - pd.Timestamp('2016-07-01', tz='UTC')).days / 365.25
+ lam = np.nansum(A.P_bg_hom30) / area          # background events per km^2 over the target period
+@@ -172,10 +172,10 @@
+ # number of 'core' background points under the fitted homogeneous rate: Poisson P(N>=5) at mean mu*ratio
+ from scipy.stats import poisson
+ q['P_core_rule_eps_at_median_ratio'] = round(float(poisson.sf(4, kh.ratio.median() * lam * np.pi * e_rule ** 2)), 4)
+-json.dump(dict(minpts_B_density_matched={f'{k[0]}_{k[1]}': v for k, v in MSB.items()}, quantification=q, runtime_s=round(time.time() - t0), B=BN), open(f'{ROOT}/out/tables/T_constructive_quant.json', 'w'), indent=1, default=float)
++json.dump(dict(minpts_B_density_matched={f'{k[0]}_{k[1]}': v for k, v in MSB.items()}, quantification=q, runtime_s=round(time.time() - t0), B=BN), open(f'{ROOT}/out/tables/T_constructive_quant_UNROUNDED.json', 'w'), indent=1, default=float)
+ # membership map export (primary)
+ for (tag, method), ens in maps.items():
+     pd.DataFrame([dict(cx=c[0], cy=c[1], Pcell=p, zone=ens['zone_of_cell'].get(c, -1)) for c, p in zip(ens['U'], ens['Pcell'])]).to_csv(
+-        f'{ROOT}/out/data/membership_{tag}_{method}.csv', index=False)
+-A.to_csv(f'{ROOT}/out/data/cat_A_labels_constructive.csv', index=False)
++        f'{ROOT}/out/data/membership_{tag}_{method}_UNR.csv', index=False)
++pass
+ print(S.to_string()); print(Zr.to_string()); print(json.dumps(q, indent=1)); print('runtime', time.time() - t0)

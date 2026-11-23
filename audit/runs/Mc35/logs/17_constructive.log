@@ -1,0 +1,59 @@
+code/17_constructive.py:147: RuntimeWarning: Mean of empty slice
+  f5_null_mean=round(float(np.nanmean(nv)), 3), p_fault=round((1 + np.sum(nv >= f5)) / (1 + len(nv)), 4) if len(groups) else np.nan,
+code/17_constructive.py:147: RuntimeWarning: Mean of empty slice
+  f5_null_mean=round(float(np.nanmean(nv)), 3), p_fault=round((1 + np.sum(nv >= f5)) / (1 + len(nv)), 4) if len(groups) else np.nan,
+                    variant   etas  n_zones  events_in_zones  f5_zones  f5_null_mean  p_fault      I2_MWU_p  I2_med_in  I2_med_out  cells_Pcell_ge_0_5  cells_observed  n_stable  n_persistent  n_supported  n_bg_ge25  Jboot_med  Jper_med
+0              ensemble-HDB  hom30        4              635     0.446         0.290   0.0149  1.847370e-11       63.5        53.5               413.0           533.0       0.0           0.0          0.0        4.0     0.1935     0.184
+1             ensemble-DBKM  hom30        4              635     0.446         0.293   0.0249  1.847370e-11       63.5        53.5               380.0           533.0       0.0           0.0          0.0        4.0     0.1935     0.207
+2  weighted-DBSCAN eps=10.6  hom30        0                0       NaN           NaN      NaN           NaN        NaN        56.4                 NaN             NaN       NaN           NaN          NaN        NaN        NaN       NaN
+3  weighted-DBSCAN eps=10.0  hom30        0                0       NaN           NaN      NaN           NaN        NaN        56.4                 NaN             NaN       NaN           NaN          NaN        NaN        NaN       NaN
+4  weighted-DBSCAN eps=15.0  hom30        9              891     0.488         0.318   0.0199  5.006461e-30       63.5        53.5                 NaN             NaN       2.0           0.0          0.0        1.0     0.2880     0.193
+5  weighted-DBSCAN eps=20.0  hom30        7             1596     0.491         0.282   0.0050  4.970768e-06       57.4        50.6                 NaN             NaN       3.0           1.0          1.0        5.0     0.7200     0.212
+                     variant   etas  zone  n_cells  n_events  exp_bg    lon    lat  mean_Pcell  J_boot  J_boot_cells  J_period_B_ZBZ  J_period_B_GK  J_A_ZBZ  frac_within5km  bg_ge25  stable  persistent  supported
+0               ensemble-HDB  hom30     0       27        57    28.1  26.74  38.61         1.0   0.141         0.117           0.145          0.128    0.600           0.702     True   False       False      False
+1               ensemble-HDB  hom30     1       24       151    28.6  27.03  37.84         1.0   0.246         0.180           0.147          0.110    0.719           0.450     True   False       False      False
+2               ensemble-HDB  hom30     2       94       270   108.6  28.13  36.71         1.0   0.418         0.289           0.256          0.165    0.606           0.304     True   False       False      False
+3               ensemble-HDB  hom30     3       25       157    26.5  27.92  39.17         1.0   0.089         0.086           0.221          0.354    0.641           0.592     True   False       False      False
+4              ensemble-DBKM  hom30     0       27        57    28.1  26.74  38.61         1.0   0.141         0.117           0.152          0.130    0.214           0.702     True   False       False      False
+5              ensemble-DBKM  hom30     1       24       151    28.6  27.03  37.84         1.0   0.246         0.180           0.155          0.112    0.209           0.450     True   False       False      False
+6              ensemble-DBKM  hom30     2       94       270   108.6  28.13  36.71         1.0   0.418         0.289           0.259          0.222    0.631           0.304     True   False       False      False
+7              ensemble-DBKM  hom30     3       25       157    26.5  27.92  39.17         1.0   0.089         0.086           0.320          0.340    0.229           0.592     True   False       False      False
+8   weighted-DBSCAN eps=15.0  hom30     0       27       209    22.7  26.95  37.84         NaN   0.780           NaN           0.420            NaN      NaN           0.555    False    True       False      False
+9   weighted-DBSCAN eps=15.0  hom30     1       32        78    35.2  28.40  36.99         NaN   0.315           NaN           0.068            NaN      NaN           0.256     True   False       False      False
+10  weighted-DBSCAN eps=15.0  hom30     2       18        76    16.6  27.05  36.46         NaN   0.288           NaN           0.193            NaN      NaN           0.039    False   False       False      False
+11  weighted-DBSCAN eps=15.0  hom30     3       11       122    12.0  26.19  39.48         NaN   0.810           NaN           0.000            NaN      NaN           0.148    False    True       False      False
+12  weighted-DBSCAN eps=15.0  hom30     4       18        68    16.9  26.50  38.72         NaN   0.159           NaN           0.242            NaN      NaN           0.397    False   False       False      False
+13  weighted-DBSCAN eps=15.0  hom30     5        9       118     6.0  27.83  39.02         NaN   0.476           NaN           0.241            NaN      NaN           0.712    False   False       False      False
+14  weighted-DBSCAN eps=15.0  hom30     6       16        79    12.3  27.99  39.27         NaN   0.268           NaN           0.303            NaN      NaN           0.671    False   False       False      False
+15  weighted-DBSCAN eps=15.0  hom30     7        9        55     6.3  28.24  40.84         NaN   0.027           NaN           0.000            NaN      NaN           0.909    False   False       False      False
+16  weighted-DBSCAN eps=15.0  hom30     8        7        86     3.4  27.63  36.93         NaN   0.203           NaN           0.073            NaN      NaN           0.744    False   False       False      False
+17  weighted-DBSCAN eps=20.0  hom30     0      116       351   117.6  28.03  36.75         NaN   0.672           NaN           0.258            NaN      NaN           0.368     True   False       False      False
+18  weighted-DBSCAN eps=20.0  hom30     1       38       474    27.4  28.06  39.14         NaN   0.939           NaN           0.473            NaN      NaN           0.797     True    True       False      False
+19  weighted-DBSCAN eps=20.0  hom30     2       34       232    30.9  26.96  37.85         NaN   0.915           NaN           0.200            NaN      NaN           0.565     True    True       False      False
+20  weighted-DBSCAN eps=20.0  hom30     3       40       194    27.2  27.10  36.47         NaN   0.720           NaN           0.167            NaN      NaN           0.067     True   False       False      False
+21  weighted-DBSCAN eps=20.0  hom30     4       13       131    14.3  26.19  39.49         NaN   0.977           NaN           0.500            NaN      NaN           0.137    False    True        True       True
+22  weighted-DBSCAN eps=20.0  hom30     5       37       151    30.1  26.37  38.82         NaN   0.629           NaN           0.212            NaN      NaN           0.377     True   False       False      False
+23  weighted-DBSCAN eps=20.0  hom30     6       10        63     9.3  28.22  40.84         NaN   0.539           NaN           0.053            NaN      NaN           0.921    False   False       False      False
+{
+ "T_years": 10.28,
+ "region_area_km2": 241860,
+ "expected_bg": 479.7,
+ "bg_density_per_1e4km2_per_yr": 1.93,
+ "eps_rule_km": 10.65,
+ "expected_bg_within_10.6km": 0.707,
+ "enhancement_needed_MinPts5_10.6km": 7.1,
+ "expected_bg_within_10.0km": 0.623,
+ "enhancement_needed_MinPts5_10.0km": 8.0,
+ "expected_bg_within_15.0km": 1.402,
+ "enhancement_needed_MinPts5_15.0km": 3.6,
+ "expected_bg_within_20.0km": 2.493,
+ "enhancement_needed_MinPts5_20.0km": 2.0,
+ "kde_ratio_raw_zones_max": 3.94,
+ "kde_ratio_raw_zones_median": 1.9,
+ "years_to_MinPts5_at_median_KDE_ratio_10.6km": 38.3,
+ "years_to_MinPts5_at_median_KDE_ratio_10.0km": 43.4,
+ "years_to_MinPts5_at_max_KDE_ratio_10.6km": 18.5,
+ "years_to_MinPts5_at_max_KDE_ratio_10.0km": 20.9,
+ "P_core_rule_eps_at_median_ratio": 0.0121
+}
+runtime 16.69973087310791

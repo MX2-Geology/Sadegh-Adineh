@@ -1,0 +1,7 @@
+variant,etas,n_zones,events_in_zones,f5_zones,f5_null_mean,p_fault,I2_MWU_p,I2_med_in,I2_med_out,cells_Pcell_ge_0_5,cells_observed,n_stable,n_persistent,n_supported,n_bg_ge25,Jboot_med,Jper_med
+ensemble-HDB,hom30,4,635,0.446,0.29,0.0149,1.8473695446120366e-11,63.5,53.5,413.0,533.0,0.0,0.0,0.0,4.0,0.1935,0.184
+ensemble-DBKM,hom30,4,635,0.446,0.293,0.0249,1.8473695446120366e-11,63.5,53.5,380.0,533.0,0.0,0.0,0.0,4.0,0.1935,0.20700000000000002
+weighted-DBSCAN eps=10.6,hom30,0,0,,,,,,56.4,,,,,,,,
+weighted-DBSCAN eps=10.0,hom30,0,0,,,,,,56.4,,,,,,,,
+weighted-DBSCAN eps=15.0,hom30,9,891,0.488,0.318,0.0199,5.0064606727170806e-30,63.5,53.5,,,2.0,0.0,0.0,1.0,0.288,0.193
+weighted-DBSCAN eps=20.0,hom30,7,1596,0.491,0.282,0.005,4.970768375330751e-06,57.4,50.6,,,3.0,1.0,1.0,5.0,0.72,0.212

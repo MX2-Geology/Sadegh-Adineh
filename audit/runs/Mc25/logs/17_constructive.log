@@ -1,0 +1,74 @@
+code/17_constructive.py:147: RuntimeWarning: Mean of empty slice
+  f5_null_mean=round(float(np.nanmean(nv)), 3), p_fault=round((1 + np.sum(nv >= f5)) / (1 + len(nv)), 4) if len(groups) else np.nan,
+                    variant   etas  n_zones  events_in_zones  f5_zones  f5_null_mean  p_fault       I2_MWU_p  I2_med_in  I2_med_out  cells_Pcell_ge_0_5  cells_observed  n_stable  n_persistent  n_supported  n_bg_ge25  Jboot_med  Jper_med
+0              ensemble-HDB  hom30       11            12869     0.484         0.296    0.005   1.800663e-08       57.4        55.7              1028.0          1375.0       1.0           1.0          0.0       11.0      0.430     0.333
+1             ensemble-DBKM  hom30        9            12160     0.503         0.301    0.005  1.639234e-167       57.7        38.5               851.0          1375.0       4.0           1.0          1.0        9.0      0.678     0.361
+2   weighted-DBSCAN eps=4.0  hom30        0                0       NaN           NaN      NaN            NaN        NaN        57.1                 NaN             NaN       NaN           NaN          NaN        NaN        NaN       NaN
+3  weighted-DBSCAN eps=10.0  hom30       13            12059     0.495         0.299    0.010   2.030548e-22       57.4        55.6                 NaN             NaN       8.0           3.0          2.0       12.0      0.788     0.368
+4  weighted-DBSCAN eps=15.0  hom30        6            13449     0.476         0.290    0.005   4.783755e-25       57.4        48.6                 NaN             NaN       3.0           0.0          0.0        5.0      0.737     0.304
+5  weighted-DBSCAN eps=20.0  hom30        2            13743     0.473         0.282    0.005   3.308875e-01       57.1        56.5                 NaN             NaN       1.0           1.0          1.0        1.0      0.748     0.459
+                     variant   etas  zone  n_cells  n_events  exp_bg    lon    lat  mean_Pcell  J_boot  J_boot_cells  J_period_B_ZBZ  J_period_B_GK  J_A_ZBZ  frac_within5km  bg_ge25  stable  persistent  supported
+0               ensemble-HDB  hom30     0      370      3542   791.9  27.79  36.69        0.98   0.759         0.621           0.130          0.091    0.105           0.292     True    True       False      False
+1               ensemble-HDB  hom30     1       12        49    25.2  26.22  38.11        0.78   0.036         0.063           0.038          0.000    1.000           0.408     True   False       False      False
+2               ensemble-HDB  hom30     2      223      6280   487.8  27.48  38.76        0.90   0.701         0.486           0.270          0.261    0.076           0.639     True   False       False      False
+3               ensemble-HDB  hom30     3       31       831    60.4  26.17  39.51        0.95   0.308         0.230           0.333          0.417    0.969           0.148     True   False       False      False
+4               ensemble-HDB  hom30     4       80       694   182.3  27.88  40.67        0.92   0.505         0.351           0.238          0.229    0.188           0.644     True   False       False      False
+5               ensemble-HDB  hom30     5       57       301   106.3  28.94  40.39        0.92   0.271         0.237           0.407          0.367    0.368           0.678     True   False       False      False
+6               ensemble-HDB  hom30     6       18       442    25.8  28.98  39.22        0.90   0.430         0.166           0.391          0.238    0.478           0.052     True   False       False      False
+7               ensemble-HDB  hom30     7       65       414   122.6  29.36  37.89        0.97   0.713         0.480           0.500          0.294    0.576           0.638     True   False        True      False
+8               ensemble-HDB  hom30     8       12        64    34.0  29.72  39.03        0.97   0.132         0.181           0.333          0.333    0.615           0.250     True   False       False      False
+9               ensemble-HDB  hom30     9       87       204   144.0  30.57  37.31        0.99   0.618         0.406           0.327          0.317    0.648           0.368     True   False       False      False
+10              ensemble-HDB  hom30    10       23        48    37.3  30.60  36.12        0.99   0.341         0.234           0.425          0.302    0.958           0.104     True   False       False      False
+11             ensemble-DBKM  hom30     0       13        51    27.4  26.21  38.10        0.94   0.061         0.087           0.016          0.000    0.000           0.451     True   False       False      False
+12             ensemble-DBKM  hom30     1      262      6419   529.7  27.48  38.75        0.98   0.781         0.562           0.425          0.237    0.274           0.630     True    True       False      False
+13             ensemble-DBKM  hom30     2       33       834    62.4  26.17  39.51        0.89   0.371         0.273           0.111          0.199    0.676           0.147     True   False       False      False
+14             ensemble-DBKM  hom30     3      326      3415   735.6  27.73  36.68        0.99   0.817         0.695           0.361          0.224    0.437           0.295     True    True       False      False
+15             ensemble-DBKM  hom30     4       63       639   155.8  27.84  40.68        0.97   0.678         0.453           0.246          0.284    0.446           0.649     True   False       False      False
+16             ensemble-DBKM  hom30     5       37       241    73.7  28.96  40.49        0.87   0.446         0.310           0.425          0.381    0.324           0.768     True   False       False      False
+17             ensemble-DBKM  hom30     6       44       375    95.7  29.30  37.90        0.97   0.833         0.664           0.673          0.353    0.500           0.640     True    True        True       True
+18             ensemble-DBKM  hom30     7       13        65    35.0  29.73  39.03        0.95   0.424         0.358           0.294          0.364    0.643           0.246     True   False       False      False
+19             ensemble-DBKM  hom30     8       44       121    86.7  30.56  37.12        0.92   0.808         0.576           0.375          0.404    0.500           0.496     True    True       False      False
+20  weighted-DBSCAN eps=10.0  hom30     0       38       225    68.6  28.97  40.50         NaN   0.652           NaN           0.409            NaN      NaN           0.809     True   False       False      False
+21  weighted-DBSCAN eps=10.0  hom30     1       97      1178   199.3  26.44  38.82         NaN   0.766           NaN           0.328            NaN      NaN           0.409     True    True       False      False
+22  weighted-DBSCAN eps=10.0  hom30     2       33        94    69.7  30.55  37.16         NaN   0.716           NaN           0.579            NaN      NaN           0.500     True   False        True      False
+23  weighted-DBSCAN eps=10.0  hom30     3      278      3146   643.1  27.76  36.67         NaN   0.878           NaN           0.407            NaN      NaN           0.305     True    True       False      False
+24  weighted-DBSCAN eps=10.0  hom30     4       93      3545   165.1  28.04  39.13         NaN   0.933           NaN           0.680            NaN      NaN           0.753     True    True        True       True
+25  weighted-DBSCAN eps=10.0  hom30     5       38       339    76.4  29.34  37.90         NaN   0.788           NaN           0.620            NaN      NaN           0.637     True    True        True       True
+26  weighted-DBSCAN eps=10.0  hom30     6       24        68    46.3  26.53  36.85         NaN   0.228           NaN           0.065            NaN      NaN           0.294     True   False       False      False
+27  weighted-DBSCAN eps=10.0  hom30     7       67      1487   130.1  27.00  37.87         NaN   0.844           NaN           0.260            NaN      NaN           0.545     True    True       False      False
+28  weighted-DBSCAN eps=10.0  hom30     8       45       550   109.0  27.89  40.73         NaN   0.824           NaN           0.365            NaN      NaN           0.669     True    True       False      False
+29  weighted-DBSCAN eps=10.0  hom30     9       10       408    15.1  28.98  39.22         NaN   0.865           NaN           0.368            NaN      NaN           0.034    False    True       False      False
+30  weighted-DBSCAN eps=10.0  hom30    10       13        66    34.1  29.75  39.02         NaN   0.280           NaN           0.435            NaN      NaN           0.303     True   False       False      False
+31  weighted-DBSCAN eps=10.0  hom30    11       31       903    57.7  26.18  39.50         NaN   0.980           NaN           0.123            NaN      NaN           0.178     True    True       False      False
+32  weighted-DBSCAN eps=10.0  hom30    12       14        50    25.5  26.21  38.11         NaN   0.106           NaN           0.020            NaN      NaN           0.420     True   False       False      False
+33  weighted-DBSCAN eps=15.0  hom30     0      420      3664   838.0  27.87  36.71         NaN   0.706           NaN           0.351            NaN      NaN           0.297     True   False       False      False
+34  weighted-DBSCAN eps=15.0  hom30     1      174      1019   325.6  28.23  40.54         NaN   0.246           NaN           0.319            NaN      NaN           0.641     True   False       False      False
+35  weighted-DBSCAN eps=15.0  hom30     2      416      8140   744.8  27.40  38.84         NaN   0.797           NaN           0.370            NaN      NaN           0.529     True    True       False      False
+36  weighted-DBSCAN eps=15.0  hom30     3       62       145   106.8  30.50  37.09         NaN   0.863           NaN           0.227            NaN      NaN           0.421     True    True       False      False
+37  weighted-DBSCAN eps=15.0  hom30     4       56       431   101.6  29.31  37.85         NaN   0.768           NaN           0.289            NaN      NaN           0.596     True    True       False      False
+38  weighted-DBSCAN eps=15.0  hom30     5       13        50    16.9  30.81  40.75         NaN   0.028           NaN           0.250            NaN      NaN           0.740    False   False       False      False
+39  weighted-DBSCAN eps=20.0  hom30     0     1272     13688  2300.0  27.72  38.34         NaN   0.995           NaN           0.635            NaN      NaN           0.472     True    True        True       True
+40  weighted-DBSCAN eps=20.0  hom30     1       17        55    21.8  30.76  40.73         NaN   0.501           NaN           0.283            NaN      NaN           0.745    False   False       False      False
+{
+ "T_years": 10.28,
+ "region_area_km2": 241860,
+ "expected_bg": 2387.7,
+ "bg_density_per_1e4km2_per_yr": 9.6,
+ "eps_rule_km": 4.0,
+ "expected_bg_within_4.0km": 0.495,
+ "enhancement_needed_MinPts5_4.0km": 10.1,
+ "expected_bg_within_10.0km": 3.101,
+ "enhancement_needed_MinPts5_10.0km": 1.6,
+ "expected_bg_within_15.0km": 6.978,
+ "enhancement_needed_MinPts5_15.0km": 0.7,
+ "expected_bg_within_20.0km": 12.406,
+ "enhancement_needed_MinPts5_20.0km": 0.4,
+ "kde_ratio_raw_zones_max": 3.94,
+ "kde_ratio_raw_zones_median": 1.9,
+ "years_to_MinPts5_at_median_KDE_ratio_4.0km": 54.7,
+ "years_to_MinPts5_at_median_KDE_ratio_10.0km": 8.7,
+ "years_to_MinPts5_at_max_KDE_ratio_4.0km": 26.4,
+ "years_to_MinPts5_at_max_KDE_ratio_10.0km": 4.2,
+ "P_core_rule_eps_at_median_ratio": 0.0028
+}
+runtime 219.35704731941223
